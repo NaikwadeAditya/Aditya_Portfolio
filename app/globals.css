@@ -1,0 +1,392 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #09090b;
+  --foreground: #f4f4f5;
+  --card: #121215;
+  --card-hover: #18181b;
+  --border: #27272a;
+  --muted: #71717a;
+  --muted-foreground: #a1a1aa;
+  --accent-emerald: #10b981;
+  --accent-cyan: #06b6d4;
+  --accent-amber: #f59e0b;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Subtle Engineering Grid Background */
+.bg-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-dots {
+  background-size: 20px 20px;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+}
+
+/* Code card syntax highlight tokens */
+.token-keyword { color: #c084fc; }
+.token-string { color: #6ee7b7; }
+.token-property { color: #93c5fd; }
+.token-number { color: #fcd34d; }
+.token-boolean { color: #fb923c; }
+.token-comment { color: #71717a; font-style: italic; }
+
+
+/* LIGHT THEME */
+html[data-theme="light"] {
+  color-scheme: light;
+
+  --background: #f8fafc;
+  --foreground: #171c25;
+  --surface: #ffffff;
+  --surface-soft: #f1f5f9;
+  --border: #dbe3ec;
+  --muted-text: #475569;
+}
+
+/* Main page */
+html[data-theme="light"] body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Text contrast */
+html[data-theme="light"] .text-zinc-100,
+html[data-theme="light"] .text-zinc-200 {
+  color: #171c25 !important;
+}
+
+html[data-theme="light"] .text-zinc-300 {
+  color: #273449 !important;
+}
+
+html[data-theme="light"] .text-zinc-400 {
+  color: #475569 !important;
+}
+
+html[data-theme="light"] .text-zinc-500 {
+  color: #526176 !important;
+}
+
+html[data-theme="light"] .text-zinc-600 {
+  color: #64748b !important;
+}
+
+/* Card backgrounds */
+html[data-theme="light"] .bg-zinc-950,
+html[data-theme="light"] .bg-zinc-950\/95,
+html[data-theme="light"] .bg-zinc-900,
+html[data-theme="light"] .bg-zinc-900\/60,
+html[data-theme="light"] .bg-zinc-900\/70,
+html[data-theme="light"] .bg-zinc-900\/85 {
+  background-color: #ffffff !important;
+}
+
+html[data-theme="light"] .bg-zinc-800,
+html[data-theme="light"] .bg-zinc-800\/60 {
+  background-color: #edf2f7 !important;
+}
+
+/* Borders */
+html[data-theme="light"] .border-zinc-800,
+html[data-theme="light"] .border-zinc-800\/80,
+html[data-theme="light"] .border-zinc-700,
+html[data-theme="light"] .border-zinc-700\/50 {
+  border-color: #dbe3ec !important;
+}
+
+/* Hover effects */
+html[data-theme="light"] .hover\:bg-zinc-800:hover {
+  background-color: #e2e8f0 !important;
+}
+
+html[data-theme="light"] .hover\:bg-zinc-900:hover {
+  background-color: #f1f5f9 !important;
+}
+
+html[data-theme="light"] .hover\:text-zinc-100:hover,
+html[data-theme="light"] .hover\:text-zinc-200:hover {
+  color: #059669 !important;
+}
+
+/* Skill badges and small labels */
+html[data-theme="light"] .bg-zinc-800.text-zinc-300,
+html[data-theme="light"] .bg-zinc-800.text-zinc-400 {
+  color: #273449 !important;
+}
+
+/* Subtle background grid */
+html[data-theme="light"] .bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(51, 65, 85, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(51, 65, 85, 0.035) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Form fields */
+html[data-theme="light"] input,
+html[data-theme="light"] textarea {
+  background-color: #ffffff !important;
+  color: #171c25 !important;
+  border-color: #cbd5e1 !important;
+}
+
+html[data-theme="light"] input::placeholder,
+html[data-theme="light"] textarea::placeholder {
+  color: #64748b !important;
+}
+
+/* Scrollbar */
+html[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+html[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+html[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+
+/* CODE EDITOR - LIGHT MODE */
+html[data-theme="light"] .code-window {
+  background: #ffffff !important;
+  color: #263449 !important;
+  border: 1px solid #dbe3ec !important;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.10) !important;
+}
+
+/* Editor header and tab area */
+html[data-theme="light"] .code-window .bg-zinc-950,
+html[data-theme="light"] .code-window .bg-zinc-950\/80,
+html[data-theme="light"] .code-window .bg-zinc-900,
+html[data-theme="light"] .code-window .bg-zinc-900\/90 {
+  background: #f1f5f9 !important;
+}
+
+/* Editor body */
+html[data-theme="light"] .code-window .bg-zinc-800 {
+  background: #e2e8f0 !important;
+}
+
+/* Code text */
+html[data-theme="light"] .code-window .text-zinc-100,
+html[data-theme="light"] .code-window .text-zinc-200,
+html[data-theme="light"] .code-window .text-zinc-300 {
+  color: #273449 !important;
+}
+
+html[data-theme="light"] .code-window .text-zinc-400 {
+  color: #475569 !important;
+}
+
+html[data-theme="light"] .code-window .text-zinc-500,
+html[data-theme="light"] .code-window .text-zinc-600 {
+  color: #64748b !important;
+}
+
+/* Editor borders */
+html[data-theme="light"] .code-window .border-zinc-800,
+html[data-theme="light"] .code-window .border-zinc-700 {
+  border-color: #dbe3ec !important;
+}
+
+/* Editor scrollbar */
+html[data-theme="light"] .code-window ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+html[data-theme="light"] .code-window ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+
+/* SKILLS BADGES - LIGHT MODE */
+html[data-theme="light"] #skills .bg-zinc-700,
+html[data-theme="light"] #skills .bg-zinc-800,
+html[data-theme="light"] #skills .bg-zinc-900 {
+  background-color: #edf2f7 !important;
+  border: 1px solid #dbe3ec !important;
+  color: #273449 !important;
+}
+
+/* muted badge text */
+html[data-theme="light"] #skills .text-zinc-400,
+html[data-theme="light"] #skills .text-zinc-500,
+html[data-theme="light"] #skills .text-zinc-600 {
+  color: #273449 !important;
+}
+
+/* Makes skill labels readable */
+html[data-theme="light"] #skills span {
+  text-shadow: none !important;
+}
+
+/* Badge hover */
+html[data-theme="light"] #skills .bg-zinc-700:hover,
+html[data-theme="light"] #skills .bg-zinc-800:hover {
+  background-color: #dcefe8 !important;
+  border-color: #a7d9c4 !important;
+  color: #065f46 !important;
+}
+
+/* Preserve emerald indicators */
+html[data-theme="light"] #skills .bg-emerald-400,
+html[data-theme="light"] #skills .bg-emerald-500 {
+  background-color: #10b981 !important;
+}
+
+
+/* SKILLS SECTION - LIGHT MODE */
+/* Skill cards */
+html[data-theme="light"] #skills .skill-card {
+  background: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Card headings */
+html[data-theme="light"] #skills .skill-card h3 {
+  color: #172033 !important;
+}
+
+/* Card descriptions */
+html[data-theme="light"] #skills .skill-card p {
+  color: #475569 !important;
+}
+
+/* Category filters */
+html[data-theme="light"] #skills .skill-filter {
+  background: #ffffff !important;
+  color: #334155 !important;
+  border-color: #e2e8f0 !important;
+}
+
+html[data-theme="light"] #skills .skill-filter:hover {
+  background: #ecfdf5 !important;
+  color: #047857 !important;
+  border-color: #a7f3d0 !important;
+}
+
+/* Selected category */
+html[data-theme="light"] #skills .skill-filter.bg-zinc-800 {
+  background: #d1fae5 !important;
+  color: #065f46 !important;
+  border-color: #a7f3d0 !important;
+}
+
+/* All skill badges */
+html[data-theme="light"] #skills .skill-badge {
+  background: #f1f5f9 !important;
+  color: #1e293b !important;
+  border-color: #dbe3ec !important;
+  text-shadow: none !important;
+}
+
+/* Badge hover */
+html[data-theme="light"] #skills .skill-badge:hover {
+  background: #dcfce7 !important;
+  color: #065f46 !important;
+  border-color: #a7f3d0 !important;
+}
+
+/* Preserve indicator colors */
+html[data-theme="light"] #skills .skill-badge .bg-emerald-400 {
+  background-color: #10b981 !important;
+}
+
+html[data-theme="light"] #skills .skill-badge .bg-cyan-400 {
+  background-color: #06b6d4 !important;
+}
+
+html[data-theme="light"] #skills .skill-badge .bg-zinc-500 {
+  background-color: #94a3b8 !important;
+}
+
+
+
+
+/* =========================================
+   CASE STUDY MODAL - LIGHT MODE
+   Dark Mode remains unchanged
+========================================= */
+
+/* Challenge, Architecture and Solutions cards */
+html[data-theme="light"] .case-study-panel {
+  background-color: #f8fafc !important;
+  background-image: none !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #334155 !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04) !important;
+}
+
+/* All descriptions and solution text */
+html[data-theme="light"] .case-study-panel p,
+html[data-theme="light"] .case-study-panel li,
+html[data-theme="light"] .case-study-panel li span {
+  color: #334155 !important;
+}
+
+/* Challenge heading */
+html[data-theme="light"] .case-study-panel .text-amber-400 {
+  color: #b45309 !important;
+}
+
+/* Architecture heading */
+html[data-theme="light"] .case-study-panel .text-cyan-400 {
+  color: #0284c7 !important;
+}
+
+/* Solutions heading and check icons */
+html[data-theme="light"] .case-study-panel .text-emerald-400 {
+  color: #059669 !important;
+}
+
+/* Keep the original colored icons */
+html[data-theme="light"] .case-study-panel svg.text-amber-400 {
+  color: #b45309 !important;
+}
+
+html[data-theme="light"] .case-study-panel svg.text-cyan-400 {
+  color: #0284c7 !important;
+}
+
+html[data-theme="light"] .case-study-panel svg.text-emerald-400 {
+  color: #059669 !important;
+}
