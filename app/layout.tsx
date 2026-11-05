@@ -2,28 +2,66 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
-// SEO Based Metadata
+// SEO Based Metadata, We have to Change the Metadata Everytime We Create the Diffrent Project,
+// ie. for Diffrent Project Diffrent Metadata and Deployed Url should be there.
 export const metadata: Metadata = {
-  title: "Aditya Naikwade — Full-Stack Developer & Cloud Systems Engineer",
-  description: "Portfolio of Aditya Naikwade. Full-Stack Developer & Software Development Intern at ThinkBuild. Experienced in React, Next.js, Node.js, MERN stack, Docker, Kubernetes, and Cloud Resilience.",
+  metadataBase: new URL(
+    "https://aditya-portfolio-sigma-nine.vercel.app"
+  ),
+
+  title: "Aditya Naikwade | Full Stack & Software Developer",
+
+  description:
+    "Aditya Naikwade is a Full Stack and Software Developer specializing in React, Next.js, TypeScript, and MERN stack development. Exploring Generative AI, LLMs, AI Agents, and modern AI technologies.",
+
   keywords: [
     "Aditya Naikwade",
     "Aditya Naikwade Portfolio",
-    "ThinkBuild Intern",
-    "Full-Stack Developer",
+    "Full Stack Developer",
+    "Software Developer",
+    "MERN Stack Developer",
     "React Developer",
     "Next.js Developer",
-    "MERN Stack",
-    "Self-Healing Cloud Cluster",
-    "MasteryHub",
-    "Pune Developer"
+    "JavaScript Developer",
+    "TypeScript Developer",
+    "Generative AI",
+    "GenAI",
+    "Large Language Models",
+    "LLM",
+    "AI Agents",
+    "Web Development",
+    "Software Engineering",
   ],
-  authors: [{ name: "Aditya Naikwade", url: "https://github.com/AdityaNaikwade" }],
+
+  authors: [
+    {
+      name: "Aditya Naikwade",
+      url: "https://aditya-portfolio-sigma-nine.vercel.app",
+    },
+  ],
+
+  creator: "Aditya Naikwade",
+
+  alternates: {
+    canonical: "/",
+  },
+
   openGraph: {
-    title: "Aditya Naikwade — Full-Stack Developer & Cloud Systems Engineer",
-    description: "Explore production full-stack web applications, cloud dashboards, and engineering experience.",
+    title: "Aditya Naikwade | Full Stack & Software Developer",
+    description:
+      "Explore the portfolio, projects, technical skills, and work of Aditya Naikwade — Full Stack Developer exploring Generative AI and modern software technologies.",
+    url: "https://aditya-portfolio-sigma-nine.vercel.app",
+    siteName: "Aditya Naikwade Portfolio",
     type: "website",
-    locale: "en_US",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 };
 
