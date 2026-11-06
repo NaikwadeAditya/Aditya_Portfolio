@@ -31,7 +31,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose 
 
   const actions = [
     {
-      label: "Jump to About & Engineering Overview",
+      label: "Jump to About & Engineering Section",
       category: "Navigation",
       action: () => {
         window.location.href = "#about";
@@ -39,7 +39,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose 
       },
     },
     {
-      label: "Jump to Verified Skills Matrix",
+      label: "Jump to Technical Skills Section",
       category: "Navigation",
       action: () => {
         window.location.href = "#skills";
@@ -63,7 +63,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose 
       },
     },
     {
-      label: "Jump to ThinkBuild Internship Experience",
+      label: "Jump to Experience Section",
       category: "Experience",
       action: () => {
         window.location.href = "#experience";

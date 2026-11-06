@@ -32,7 +32,7 @@ export const BentoAbout: React.FC = () => {
         {/* Card 1: ThinkBuild Internship */}
         <div className="md:col-span-7 p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-zinc-700/80 transition-all space-y-4 flex flex-col justify-between">
           <div className="space-y-3">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col min-[400px]:flex-row min-[400px]:items-center gap-2 min-[400px]:gap-3">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
                 <Briefcase className="w-3.5 h-3.5" />
                 <span>Current Engineering Role</span>
@@ -66,7 +66,7 @@ export const BentoAbout: React.FC = () => {
         {/* Card 2: Cloud Resilience & Automation */}
         <div className="md:col-span-5 p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-zinc-700/80 transition-all space-y-4 flex flex-col justify-between">
           <div className="space-y-3">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col min-[400px]:flex-row min-[400px]:items-center gap-2 min-[400px]:gap-3">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
                 <Cloud className="w-3.5 h-3.5" />
                 <span>Distributed & Cloud Systems</span>
@@ -99,7 +99,7 @@ Actions to automate testing, image builds, and Kubernetes deployments.
 
         {/* Card 3: Education & Academics */}
         <div className="md:col-span-6 p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-zinc-700/80 transition-all space-y-3">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col min-[400px]:flex-row min-[400px]:items-center gap-2 min-[400px]:gap-3">
             <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono bg-amber-500/10 text-amber-400 border border-amber-500/20">
               <GraduationCap className="w-3.5 h-3.5" />
               <span>Academic Foundation</span>
